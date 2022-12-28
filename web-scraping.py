@@ -7,7 +7,7 @@ httpRequest=requests.get('https://www.glassdoor.com/List/Best-Jobs-in-America-20
 html = httpRequest.content
 
 parsedHtml=BeautifulSoup(html,"html.parser")
-
+# kodları parse ediyoruz
 salaries=parsedHtml.find_all("div",{"data-test":"median-base-salary"})
 
 for salary in salaries:
